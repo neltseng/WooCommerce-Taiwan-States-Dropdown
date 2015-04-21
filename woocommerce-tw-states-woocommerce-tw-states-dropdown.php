@@ -1,26 +1,26 @@
 <?php
 /*
 Plugin Name: WooCommerce Taiwan States Dropdown
-Plugin URI: https://github.com/neltseng/WooCommerce-Taiwan-States-Select
-Description: WooCommerce 台灣結帳表單城市下拉
+Plugin URI: https://github.com/neltseng/WooCommerce-Taiwan-States-Dropdown/
+Description: WooCommerce 台灣 結帳表單城市下拉選項.
 Version: 1.0
 Author: Nel Tseng
-Author URI: https://cloudwp.pro
+Author URI: https://cloudwp.pro/
  */
 
-add_filter('woocommerce_states', 'custom_woocommerce_states');
-function custom_woocommerce_states($states) {
+add_filter('woocommerce_states', 'cwp_woocommerce_tw_states');
+function cwp_woocommerce_tw_states($states) {
 
 	$states['TW'] = array(
-		'TW1' => '基隆市',
-		'TW2' => '台北市',
-		'TW3' => '新北市',
-		'TW4' => '宜蘭縣',
-		'TW5' => '桃園市',
-		'TW6' => '新竹市',
-		'TW7' => '新竹縣',
-		'TW8' => '苗栗縣',
-		'TW9' => '台中市',
+		'TW01' => '基隆市',
+		'TW02' => '台北市',
+		'TW03' => '新北市',
+		'TW04' => '宜蘭縣',
+		'TW05' => '桃園市',
+		'TW06' => '新竹市',
+		'TW07' => '新竹縣',
+		'TW08' => '苗栗縣',
+		'TW09' => '台中市',
 		'TW10' => '彰化縣',
 		'TW11' => '南投縣',
 		'TW12' => '雲林縣',
@@ -42,10 +42,10 @@ function custom_woocommerce_states($states) {
 
 // 自訂結帳欄位排序
 
-add_filter('woocommerce_default_address_fields', 'my_default_address_fields');
-function my_default_address_fields($fields) {
+add_filter('woocommerce_default_address_fields', 'cwp_custom_address_fields');
+function cwp_custom_address_fields($fields) {
     
-    //調動整行調整順序
+    // 調整整行順序
     
     $fields2['country'] = $fields['country'];
     $fields2['first_name'] = $fields['first_name'];
