@@ -8,37 +8,15 @@ Author: Nel Tseng
 Author URI: https://cloudwp.pro/
  */
 
-add_filter('woocommerce_states', 'cwp_woocommerce_tw_states');
-function cwp_woocommerce_tw_states($states) {
+add_filter('woocommerce_states', 'custom_woocommerce_states');
 
-	$states['TW'] = array(
-		'TW01' => '基隆市',
-		'TW02' => '台北市',
-		'TW03' => '新北市',
-		'TW04' => '宜蘭縣',
-		'TW05' => '桃園市',
-		'TW06' => '新竹市',
-		'TW07' => '新竹縣',
-		'TW08' => '苗栗縣',
-		'TW09' => '台中市',
-		'TW10' => '彰化縣',
-		'TW11' => '南投縣',
-		'TW12' => '雲林縣',
-		'TW13' => '嘉義市',
-		'TW14' => '嘉義縣',
-		'TW15' => '台南市',
-		'TW16' => '高雄市',
-		'TW17' => '屏東縣',
-		'TW18' => '花蓮縣',
-		'TW19' => '台東縣',
-		'TW20' => '澎湖',
-		'TW21' => '金門',
-		'TW22' => '馬祖',
-		'TW23' => '離島地區',
-	);
-
-	return $states;
+function custom_woocommerce_states($states) {
+    
+    $states['TW'] = array('TW01' => '基隆市', 'TW02' => '台北市', 'TW03' => '新北市', 'TW04' => '宜蘭縣', 'TW05' => '桃園市', 'TW06' => '新竹市', 'TW07' => '新竹縣', 'TW08' => '苗栗縣', 'TW09' => '台中市', 'TW10' => '彰化縣', 'TW11' => '南投縣', 'TW12' => '雲林縣', 'TW13' => '嘉義市', 'TW14' => '嘉義縣', 'TW15' => '台南市', 'TW16' => '高雄市', 'TW17' => '屏東縣', 'TW18' => '花蓮縣', 'TW19' => '台東縣', 'TW20' => '澎湖', 'TW21' => '金門', 'TW22' => '馬祖', 'TW23' => '離島地區',);
+    
+    return $states;
 }
+
 
 // 自訂結帳欄位排序
 
