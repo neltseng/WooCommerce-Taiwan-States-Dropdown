@@ -23,7 +23,7 @@ function custom_woocommerce_states($states) {
 add_filter('woocommerce_default_address_fields', 'cwp_custom_address_fields');
 function cwp_custom_address_fields($fields) {
     
-    // 調整整行順序
+    // 調整整行順序,若需隱藏可加註排除
     
     $fields2['country'] = $fields['country'];
     $fields2['first_name'] = $fields['first_name'];
